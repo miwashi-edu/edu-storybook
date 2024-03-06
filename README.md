@@ -22,7 +22,7 @@ mkdir src
 touch src/index.js
 npm pkg set "scripts.start"="storybook dev -p 6006"
 npx sb init --builder webpack5
-npm pkg set "peerDependencies"="{'react': '>=16.8.0','react-dom': '>=16.8.0'}"
+npm pkg set peerDependencies.react=">=16.8.0" peerDependencies.react-dom=">=16.8.0"
 ```
 
 
