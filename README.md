@@ -17,7 +17,6 @@ mkdir storybook && cd storybook
 npm init -y
 npm install react react-dom
 npm install --save-dev webpack webpack-cli
-#npm install -D @babel/preset-env @babel/preset-react
 mkdir src
 touch src/index.js
 npm pkg set "scripts.start"="storybook dev -p 6006"
