@@ -13,6 +13,7 @@
 ```bash
 cd ~
 cd ws
+rm -rf storybook
 mkdir storybook && cd storybook
 npm init -y
 npm install react react-dom
