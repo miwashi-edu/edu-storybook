@@ -11,6 +11,18 @@
 ## Instructions
 
 ```bash
+cd ~
+cd ws
+mkdir storybook && cd storybook
+npm init -y
+npm install react react-dom
+npm install rollup @rollup/plugin-babel @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-replace @rollup/plugin-terser rollup-plugin-serve rollup-plugin-livereload
+mkdir src
+touch src/index.js
+npm pkg set "scripts.build"="rollup -c"
+npm pkg set "scripts.start"="rollup -c -w"
+}
+
 ```
 
 
@@ -19,6 +31,9 @@
 ### file
 
 ```bash
+cd ~
+cd ws
+cd storybook
 cat > file << 'EOF'
 
 EOF
@@ -27,6 +42,9 @@ EOF
 ### rollup.config.js
 
 ```bash
+cd ~
+cd ws
+cd storybook
 cat > rollup.config.js << 'EOF'
 import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
