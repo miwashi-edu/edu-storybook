@@ -16,6 +16,7 @@ cd ws
 cd storybook
 npm install -D rollup @rollup/plugin-babel @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-replace @rollup/plugin-terser rollup-plugin-serve rollup-plugin-livereload
 npm install -D @babel/preset-env @babel/preset-react
+npm pkg set "presets"="['@babel/preset-env','@babel/preset-react']"
 npm pkg set "scripts.build"="rollup -c"
 
 ```
