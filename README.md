@@ -1,6 +1,6 @@
 # edu-storybook
 
-> Create a project for component development.
+> Add rollup to the project.
 
 ## Prepare
 
