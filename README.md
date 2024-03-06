@@ -36,14 +36,3 @@ npx sb init --builder webpack5 # 7
 
 
 ## Files
-
-### file
-
-```bash
-cd ~
-cd ws
-cd storybook
-cat > file << 'EOF'
-
-EOF
-```
