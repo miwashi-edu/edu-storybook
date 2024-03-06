@@ -23,8 +23,6 @@ touch src/index.js
 npm pkg set "scripts.start"="npx run storybook"
 #npm pkg set "presets"="["@babel/preset-env", "@babel/preset-react"]"
 npx sb init --builder webpack5
-}
-
 ```
 
 
