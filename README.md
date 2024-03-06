@@ -20,8 +20,7 @@ npm install --save-dev webpack webpack-cli
 #npm install -D @babel/preset-env @babel/preset-react
 mkdir src
 touch src/index.js
-npm pkg set "scripts.start"="npx run storybook"
-#npm pkg set "presets"="["@babel/preset-env", "@babel/preset-react"]"
+npm pkg set "scripts.start"="storybook dev -p 6006"
 npx sb init --builder webpack5
 ```
 
