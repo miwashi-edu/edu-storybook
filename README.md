@@ -1,6 +1,6 @@
 # edu-storybook
 
-> Add rollup to the project.
+> Creating our first components.
 
 ## Prepare
 
@@ -33,33 +33,30 @@ npm pkg set "module"="dist/index.esm.js",
 cd ~
 cd ws
 cd storybook
-cat > rollup.config.cjs << 'EOF'
-import babel from '@rollup/plugin-babel';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import terser from '@rollup/plugin-terser';
-import pkg from './package.json' //assert { type: 'json' };
+cat > ./src/components/atoms/Button.jsx << 'EOF'
+// Button.js or Button.jsx
 
-export default {
-  input: 'src/index.js',
-  output: [
-    { file: pkg.main, format: 'cjs' },
-    { file: pkg.module, format: 'es', exports: 'named'}
-  ],
-  plugins: [
-    resolve({
-      extensions: ['.js', '.jsx'],
-      dedupe: ['prop-types']
-    }),
-    commonjs(),
-    babel({
-      babelHelpers: 'bundled',
-      exclude: 'node_modules/**',
-      presets: ['@babel/preset-env', '@babel/preset-react']
-    }),
-    terser()
-  ]
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Button = ({ onClick, children, type = 'button', className }) => (
+  <button type={type} className={`button ${className}`} onClick={onClick}>
+    {children}
+  </button>
+);
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+  children: PropTypes.node.isRequired,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  className: PropTypes.string
 };
+
+Button.defaultProps = {
+  onClick: () => {},
+  className: ''
+};
+
+export default Button;
 EOF
 ```
-
