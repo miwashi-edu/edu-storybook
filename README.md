@@ -27,6 +27,8 @@ npm pkg set "module"="dist/index.esm.js",
 
 ## Files
 
+### ./src/components/atoms/Logo.jsx
+
 ```bash
 cd ~
 cd ws
@@ -64,13 +66,13 @@ export default Logo;
 EOF
 ```
 
-### ./src/stories/atoms/Button.jsx
+### ./src/stories/Logo.stories.jsx
 
 ```bash
 cd ~
 cd ws
 cd storybook
-cat > ./src/stories/Logo.stories.jsxx << 'EOF'
+cat > ./src/stories/Logo.stories.jsx << 'EOF'
 // Logo.stories.jsx
 
 import React from 'react';
@@ -130,7 +132,7 @@ EOF
 cd ~
 cd ws
 cd storybook
-cat > ./src/stories/Button.stories.jsxx << 'EOF'
+cat > ./src/stories/Button.stories.jsx << 'EOF'
 import React from 'react';
 import Button from './Button';
 
