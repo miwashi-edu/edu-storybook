@@ -40,6 +40,18 @@ export {default} from "./LogoImage"
 EOF
 ```
 
+### ./src/components/atoms/LogoImage/LogoImage.module.css
+
+```bash
+cd ~
+cd ws
+cd storybook
+cat > ./src/components/atoms/LogoImage/LogoImage.module.css << 'EOF'
+.logoStyle {
+  fill: #123456; /* Example fill color */
+}
+EOF
+```
 
 ### ./src/components/atoms/LogoImage/LogoImage.jsx
 
@@ -48,8 +60,6 @@ cd ~
 cd ws
 cd storybook
 cat > ./src/components/atoms/LogoImage/LogoImage.jsx << 'EOF'
-// Logo.jsx
-
 import React from 'react';
 import styles from './LogoImage.module.css'; 
 
@@ -88,10 +98,8 @@ cd ~
 cd ws
 cd storybook
 cat > ./src/stories/LogoImage.stories.jsx << 'EOF'
-// Logo.stories.jsx
-
 import React from 'react';
-import LogoImage from './LogoImage';
+import LogoImage from '../components/atoms/LogoImage';
 
 export default {
   title: 'Components/Atoms/Logo',
