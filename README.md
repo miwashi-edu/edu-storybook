@@ -27,7 +27,7 @@ npm pkg set "module"="dist/index.esm.js",
 
 ## Files
 
-### rollup.config.cjs
+### ./src/components/atoms/Button.jsx
 
 ```bash
 cd ~
@@ -58,5 +58,49 @@ Button.defaultProps = {
 };
 
 export default Button;
+EOF
+```
+
+### ./src/stories/atoms/Button.jsx
+
+```bash
+cd ~
+cd ws
+cd storybook
+cat > ./src/stories/Button.stories.jsxx << 'EOF'
+import React from 'react';
+import Button from './Button';
+
+export default {
+  title: 'Components/Atoms/Button',
+  component: Button,
+  argTypes: {
+    onClick: { action: 'clicked' },
+    children: { control: 'text' },
+    type: {
+      control: { type: 'select', options: ['button', 'submit', 'reset'] },
+    },
+    className: { control: 'text' },
+  },
+};
+
+const Template = (args) => <Button {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Click Me',
+};
+
+export const SubmitButton = Template.bind({});
+SubmitButton.args = {
+  children: 'Submit',
+  type: 'submit',
+};
+
+export const CustomClassButton = Template.bind({});
+CustomClassButton.args = {
+  children: 'Custom Style',
+  className: 'custom-class',
+};
 EOF
 ```
