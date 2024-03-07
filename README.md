@@ -16,16 +16,30 @@
 cd ~
 cd ws
 cd storybook
-npm install -D rollup @rollup/plugin-babel @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-replace @rollup/plugin-terser rollup-plugin-serve rollup-plugin-livereload
-npm install -D @babel/preset-env @babel/preset-react
-npm pkg set "scripts.build"="rollup -c --bundleConfigAsCjs"
-npm pkg set "name"="@wacoco/component-library",
-npm pkg set "main"="dist/index.cjs.js",
-npm pkg set "module"="dist/index.esm.js",
+mkdir -p ./src/components/atoms/LogoImage/
+touch ./src/components/atoms/LogoImage/LogoImage.jsx
+touch ./src/components/atoms/LogoImage/LogoImage.module.css
+touch ./src/components/atoms/LogoImage/index.js
 ```
 
 
 ## Files
+
+### ./src/components/atoms/LogoImage/index.js
+
+```bash
+cd ~
+cd ws
+cd storybook
+cat > ./src/components/atoms/LogoImage/index.js << 'EOF'
+//for bundling
+export {default as LogoImage} from "./LogoImage"
+
+//for storybook
+export {default} from "./LogoImage"
+EOF
+```
+
 
 ### ./src/components/atoms/LogoImage/LogoImage.jsx
 
@@ -37,8 +51,9 @@ cat > ./src/components/atoms/LogoImage/LogoImage.jsx << 'EOF'
 // Logo.jsx
 
 import React from 'react';
+import styles from './LogoImage.module.css'; 
 
-const Logo = ({ className = '' }) => (
+const LogoImage = ({ className = '' }) => (
   <svg
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +77,7 @@ const Logo = ({ className = '' }) => (
   </svg>
 );
 
-export default Logo;
+export default LogoImage;
 EOF
 ```
 
