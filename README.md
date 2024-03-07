@@ -9,6 +9,9 @@
 > 
 
 ```bash
+cd ~
+cd ws
+cd storybook
 echo "# Atomic Design Overview" > README.md
 echo -e "\nAtomic Design is a methodology for creating design systems. It's composed of five distinct levels:" >> README.md
 echo -e "\n1. **Atoms**: The basic building blocks of matter, such as HTML tags like a form label, an input or a button." >> README.md
