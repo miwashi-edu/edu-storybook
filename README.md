@@ -27,13 +27,13 @@ npm pkg set "module"="dist/index.esm.js",
 
 ## Files
 
-### ./src/components/atoms/Logo.jsx
+### ./src/components/atoms/LogoImage/LogoImage.jsx
 
 ```bash
 cd ~
 cd ws
 cd storybook
-cat > ./src/components/atoms/Logo.jsx << 'EOF'
+cat > ./src/components/atoms/LogoImage/LogoImage.jsx << 'EOF'
 // Logo.jsx
 
 import React from 'react';
@@ -66,17 +66,17 @@ export default Logo;
 EOF
 ```
 
-### ./src/stories/Logo.stories.jsx
+### ./src/stories/LogoImage.stories.jsx
 
 ```bash
 cd ~
 cd ws
 cd storybook
-cat > ./src/stories/Logo.stories.jsx << 'EOF'
+cat > ./src/stories/LogoImage.stories.jsx << 'EOF'
 // Logo.stories.jsx
 
 import React from 'react';
-import Logo from './Logo';
+import LogoImage from './LogoImage';
 
 export default {
   title: 'Components/Atoms/Logo',
@@ -86,86 +86,5 @@ export default {
 const Template = (args) => <Logo {...args} />;
 
 export const Default = Template.bind({});
-EOF
-```
-
-
-
-
-### ./src/components/atoms/Button.jsx
-
-```bash
-cd ~
-cd ws
-cd storybook
-cat > ./src/components/atoms/Button.jsx << 'EOF'
-// Button.js or Button.jsx
-
-import React from 'react';
-import PropTypes from 'prop-types';
-
-const Button = ({ onClick, children, type = 'button', className }) => (
-  <button type={type} className={`button ${className}`} onClick={onClick}>
-    {children}
-  </button>
-);
-
-Button.propTypes = {
-  onClick: PropTypes.func,
-  children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  className: PropTypes.string
-};
-
-Button.defaultProps = {
-  onClick: () => {},
-  className: ''
-};
-
-export default Button;
-EOF
-```
-
-### ./src/stories/atoms/Button.jsx
-
-```bash
-cd ~
-cd ws
-cd storybook
-cat > ./src/stories/Button.stories.jsx << 'EOF'
-import React from 'react';
-import Button from './Button';
-
-export default {
-  title: 'Components/Atoms/Button',
-  component: Button,
-  argTypes: {
-    onClick: { action: 'clicked' },
-    children: { control: 'text' },
-    type: {
-      control: { type: 'select', options: ['button', 'submit', 'reset'] },
-    },
-    className: { control: 'text' },
-  },
-};
-
-const Template = (args) => <Button {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: 'Click Me',
-};
-
-export const SubmitButton = Template.bind({});
-SubmitButton.args = {
-  children: 'Submit',
-  type: 'submit',
-};
-
-export const CustomClassButton = Template.bind({});
-CustomClassButton.args = {
-  children: 'Custom Style',
-  className: 'custom-class',
-};
 EOF
 ```
