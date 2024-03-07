@@ -23,9 +23,9 @@ cd ~
 cd ws
 cd storybook
 rm ./src/stories/*.css # 1
-rm ./src/stories/*.jsx # 1
-rm ./src/stories/*.js # 1
-rm ./src/stories/*.mdx # 1
+rm ./src/stories/*.jsx
+rm ./src/stories/*.js
+rm ./src/stories/*.mdx
 rm -rf ./src/stories/assets
 mkdir -p ./src/components/{assets,atoms,molecules,organisms,templates,pages} # 2
 ```
