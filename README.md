@@ -31,7 +31,7 @@ npm pkg set "module"="dist/index.esm.js",
 ```bash
 cd ~
 cd ws
-cd storybooks
+cd storybook
 cat > rollup.config.js << EOF
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
