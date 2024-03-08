@@ -26,6 +26,18 @@ npm pkg set "module"="dist/index.esm.js",
 
 ## Files
 
+### ./src/index.js
+
+```bash
+cd ~
+cd ws
+cd storybook
+cat > ./src/index.js << EOF
+import {LogoImage} from './components/atoms/LogoImage'; 
+export default LogoImage;
+EOF
+```
+
 ### rollup.config.js
 
 ```bash
