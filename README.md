@@ -84,3 +84,42 @@ export default {
 EOF
 ```
 
+### Nice to have additions to package.json
+
+```json
+"peerDependenciesMeta": {
+  "react": {
+    "optional": true
+  }
+}
+
+"bugs": {
+  "url": "https://github.com/user/repo/issues"
+}
+
+
+"homepage": "https://example.com/project-homepage"
+
+"files": [
+  "dist",
+  "lib",
+  "README.md"
+]
+
+"keywords": ["react", "ui-components", "educational"]
+
+"engines": {
+  "node": ">= 14.0.0"
+}
+
+"contributors": [
+  "Name <email@example.com> (https://example.com)"
+]
+
+"publishConfig": {
+  "access": "public"
+}
+
+"private": true
+```
+
