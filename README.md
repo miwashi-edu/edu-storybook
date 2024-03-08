@@ -20,10 +20,10 @@ npm install -D rollup @rollup/plugin-babel @rollup/plugin-node-resolve @rollup/p
 npm install -D @rollup/plugin-image
 npm install -D rollup-plugin-postcss
 npm install -D @babel/preset-env @babel/preset-react
-npm pkg set "scripts.build"="rollup -c --bundleConfigAsCjs"
-npm pkg set "name"="@wacoco/component-library",
-npm pkg set "main"="dist/index.cjs.js",
-npm pkg set "module"="dist/index.esm.js",
+npm pkg set scripts.build="rollup -c --bundleConfigAsCjs"
+npm pkg set name="@wacoco/edu-components" #Change this to reflect your login on npm.js
+npm pkg set main="dist/index.cjs.js"
+npm pkg set module="dist/index.esm.js"
 ```
 
 ## Files
